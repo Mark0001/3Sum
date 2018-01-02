@@ -1,9 +1,11 @@
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        //        final int[] nums = { -1, 0, 1, 2, -1, -4 };
         final int[] nums = { 82597, -9243, 62390, 83030, -97960, -26521, -61011, 83390, -38677, 12333, 75987, 46091, 83794, 19355,
                 -71037, -6242, -28801, 324, 1202, -90885, -2989, -95597, -34333, 35528, 5680, 89093, -90606, 50360, -29393,
                 -27012, 53313, 65213, 99818, -82405, -41661, -3333, -51952, 72135, -1523, 26377, 74685, 96992, 92263, 15929, 5467,
@@ -207,11 +209,17 @@ public class Main {
 
         final Solution solution = new Solution();
         final List<List<Integer>> answer = solution.threeSum(nums);
-
         answer.forEach(list -> {
-            System.out.println(list.toString());
+            Collections.sort(list);
         });
-
+        final List<List<Integer>> answerO3 = solution.threeSumO3(nums);
+        answerO3.forEach(list -> {
+            Collections.sort(list);
+        });
+        answer.removeAll(answerO3);
+        if (answer.isEmpty()) {
+            System.out.println("two is same");
+        }
     }
 
 }
