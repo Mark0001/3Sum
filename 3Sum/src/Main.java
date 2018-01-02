@@ -219,6 +219,8 @@ public class Main {
         answer.removeAll(answerO3);
         if (answer.isEmpty()) {
             System.out.println("two is same");
+        } else {
+            System.out.println("There is something wrong!");
         }
     }
 
