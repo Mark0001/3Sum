@@ -40,7 +40,7 @@ public class Solution {
 
         }
         time2 = System.currentTimeMillis();
-        System.out.println("執行時間：" + (time2 - time1) / 1000 + "秒");
+        System.out.println("threeSum 執行時間：" + (time2 - time1) / 1000 + "秒");
         return answers;
     }
 
@@ -62,7 +62,7 @@ public class Solution {
             }
         }
         time2 = System.currentTimeMillis();
-        System.out.println("執行時間：" + (time2 - time1) / 1000 + "秒");
+        System.out.println("threeSumO3 執行時間：" + (time2 - time1) / 1000 + "秒");
         return new ArrayList<>(ansSet);
     }
 }
